@@ -1,0 +1,917 @@
+/* This is a standard reset code for the whole site, used to stabilize the overall site */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* This is CSS to head of the site, controlling the black colored header, Logo name, guitar logo and
+the slogan under, using min-height: and margin-top: functions */
+.header {
+    background-color: rgb(0, 0, 0);
+    min-height: 60vh;
+    margin-top: -100px;
+}
+
+/* The header uses the h1 size texts, with the CSS that follows under, using the Lobster font and
+white color and purple shadows created by using text-shadow to create the purple shadow */
+h1 {
+    position: relative;
+    color: white;
+    text-shadow: 2px 6px #6a008e, 2px 1px #6a008e, 0px 1px #6a008e;
+    font-size: 5rem;
+    font-family: Lobster;
+    text-align: center;
+    right: 40px;
+    top: 95px;
+}
+
+/* This CSS code positions the guitar logo, locating it next to the header text using  
+position: relative  and  transform */ 
+.head_guitarlogo {
+    position: relative;
+    height: 90px;
+    transform: rotate(75deg);
+    top: 11px;
+    left: 770px;
+}
+
+/* This CSS applies to the slogan text located under the header, using position: relative to 
+position it and using the font "Be Vietnam Pro" */ 
+.headerparagraph {
+    position: relative;
+    color: white;
+    text-shadow: 0px 1px 1px black, 0px 1px 1px black, 0px 1px 1px black;
+    font-family: Be vietnam pro;
+    text-align: center;
+    top: 20px;
+    font-size: 0.8em;
+}
+
+
+/* This CSS applies to my flexbox buttons on my head HTML on all my HTML sites. 
+It uses display: flex to position the flexbox buttons right next to each other horizontally, 
+using text-align: center to center the text on each of the boxes of the buttons 
+and uses justify-content: space-around to space each button evenly. 
+Just like the other CSS codes I use position: relative to position the flexboxes as well */
+.flexbox {
+    display: flex;
+    position: relative;
+    font-size: 2.8rem;
+    text-align: center;
+    justify-content: space-around;
+    font-family: Readex Pro;
+    bottom: 25px;
+}
+
+/* The lines between 74 and 279 contains CSS code to further edit each flexbox button individually. 
+I do things such as use position: relative to further adjust the placement of each button individually, 
+use a cursor pointer code so the mouse turns to a pointing finger when hovered over the buttons, 
+removed text decoration, colored the texts, put a border on it and used padding. 
+I also animated each button the same way, 
+using ::hover selector together with ::focus to change color of the button when hovered over 
+and I also use ::before and ::after to get a transition from one first color to the other */
+
+/* CSS for the "Home" page of the site with the hover and focus and before and after functions mentioned above */
+.flexbox_home {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border: rgb(255, 255, 255) 0.125em solid;
+    padding: 0.25em 0.5em;
+    border-radius: 0.1em;
+    text-shadow: 0 0 0.25em #6a008e, 0 0 0.25em #6a008e, 0 0 0.25em #6a008e;
+    box-shadow: 0 0 0.8em #6a008e, 0 0 0.2em #6a008e;
+}
+.flexbox_home::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: white;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(0.9, 0.25);
+    filter: blur(1em);
+    opacity: 0.5;
+}
+.flexbox_home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.05em white;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.flexbox_home:hover,
+.flexbox_home:focus {
+    background: white;
+    color: var(--clr-bg);
+    text-shadow: none;
+}
+.flexbox_home:hover::before,
+.flexbox_home:focus::before {
+    opacity: 1;
+}
+.flexbox_home:hover::after,
+.flexbox_home:focus::after {
+    opacity: 1;
+}
+
+/* CSS for the "Products" page of the site with the hover and focus and before and after functions mentioned above */
+.flexbox_products {
+    position: relative;
+    right: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border: rgb(255, 255, 255) 0.125em solid;
+    padding: 0.25em 0.3em;
+    border-radius: 0.1em;
+    text-shadow: 0 0 0.25em #6a008e, 0 0 0.25em #6a008e, 0 0 0.25em #6a008e;
+    box-shadow: 0 0 0.8em #6a008e, 0 0 0.2em #6a008e;
+}
+.flexbox_products::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: white;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(0.9, 0.25);
+    filter: blur(1em);
+    opacity: 0.5;
+}
+.flexbox_products::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.05em white;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.flexbox_products:hover,
+.flexbox_products:focus {
+    background: white;
+    color: var(--clr-bg);
+    text-shadow: none;
+}
+.flexbox_products:hover::before,
+.flexbox_products:focus::before {
+    opacity: 1;
+}
+.flexbox_products:hover::after,
+.flexbox_products:focus::after {
+    opacity: 1;
+}
+
+/* CSS for the "About Us" page of the site with the hover and focus and before and after functions mentioned above */
+.flexbox_aboutus {
+    position: relative;
+    right: 27px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border: rgb(255, 255, 255) 0.125em solid;
+    padding: 0.25em 0.2em;
+    border-radius: 0.1em;
+    text-shadow: 0 0 0.25em #6a008e, 0 0 0.25em #6a008e, 0 0 0.25em #6a008e;
+    box-shadow: 0 0 0.8em #6a008e, 0 0 0.2em #6a008e;
+}
+.flexbox_aboutus::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: white;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(0.9, 0.25);
+    filter: blur(1em);
+    opacity: 0.5;
+}
+.flexbox_aboutus::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.05em white;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.flexbox_aboutus:hover,
+.flexbox_aboutus:focus {
+    background: white;
+    color: var(--clr-bg);
+    text-shadow: none;
+}
+.flexbox_aboutus:hover::before,
+.flexbox_aboutus:focus::before {
+    opacity: 1;
+}
+.flexbox_aboutus:hover::after,
+.flexbox_aboutus:focus::after {
+    opacity: 1;
+}
+
+/* CSS for the "Contact" page of the site with the hover and focus and before and after functions 
+mentioned above */
+.flexbox_contact {
+    position: relative;
+    right: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border: rgb(255, 255, 255) 0.125em solid;
+    padding: 0.25em 0.4em;
+    border-radius: 0.1em;
+    text-shadow: 0 0 0.25em #6a008e, 0 0 0.25em #6a008e, 0 0 0.25em #6a008e;
+    box-shadow: 0 0 0.8em #6a008e, 0 0 0.2em #6a008e;
+}
+.flexbox_contact::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: white;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(0.9, 0.25);
+    filter: blur(1em);
+    opacity: 0.5;
+}
+.flexbox_contact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.05em white;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.flexbox_contact:hover,
+.flexbox_contact:focus {
+    background: white;
+    color: var(--clr-bg);
+    text-shadow: none;
+}
+.flexbox_contact:hover::before,
+.flexbox_contact:focus::before {
+    opacity: 1;
+}
+.flexbox_contact:hover::after,
+.flexbox_contact:focus::after {
+    opacity: 1;
+}
+
+/* This CSS focuses on the shopping cart symbol on the top right of the site, leading you to the 
+shopping cart section of the site. Just like with the flexbox buttons this also uses cursor: pointer
+and position: relative to place the shopping cart correctly and have the hover effect on the mouse 
+I also used ::before and ::after functions to get a white shadow transition using ::hover and ::focus 
+so that a white shadow underneath gets added when you hover over the shopping cart with your mouse */
+.shoppingcart {
+    position: relative;
+    cursor: pointer;
+    width: 61px;
+    height: 60px;
+    left: 1210px;
+    bottom: 100px;
+}
+.shoppingcart::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: white;
+    top: 55%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(0.8, 0.45);
+    filter: blur(0.7em);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.shoppingcart::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+.shoppingcart:hover,
+.shoppingcart:focus {
+    color: var(--clr-bg);
+    text-shadow: none;
+}
+.shoppingcart:hover::before,
+.shoppingcart:focus::before {
+    opacity: 1;
+}
+.shoppingcart:hover::after,
+.shoppingcart:focus::after {
+    opacity: 1;
+}
+
+/* This CSS affects the whole site altogether. This CSS code was added to prevent the site from
+having a scroll bar on the right side together with keeping the head and body in place, since 
+you can sometimes run into the issue of them being all over the place on the site, leaving
+half of the site off screen which would not be very pleasant. I use margin and padding mostly
+to deal with those kind of issues */
+html, body {
+    width: 102%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.main {
+    min-height: 10vh;
+    height: 650px;
+    background-image: linear-gradient(rgb(207, 207, 207),rgb(214, 213, 213));
+}
+.guitarbackground {
+    opacity: 0.5;
+    height: 190px;
+    position: relative;
+}
+
+/* This is the CSS that controls the footer section of the site.
+I make the color of the footer black by using background-color: and do further positioning
+using margin-top: and height:.
+For the text on the footer I use position: relative to position the text followed by height:
+and text-align: center. The font is also changed by using  font-family: choosing the font
+Readex Pro */
+.footer {
+    background-color: black;
+    position: relative;
+    height: 100px;
+    margin-top: -25px;
+    clear: both;
+}
+/* This CSS right here controls the text that starts with "© Adam Hama Gareb 2021" and so on,
+using position: relative and text-align: center to put the text in the center and so on. */
+.footertext {
+    position: relative;
+    color: white;
+    height: 10px;
+    top: 5px;
+    text-align: center;
+}
+.documentation {
+    position: relative;
+    text-align: center;
+    font-family: Readex Pro;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    top: 5px;
+    background-color: blue;
+}
+.documentation:hover {
+    color: red;
+}
+
+/* The rest of the CSS followed under is CSS specific for each page of the website. It often
+uses the same type of CSS on each section due to the site roughly having the same layout
+throughout the different pages. It is CSS for the pages of the 4 flexbox pages together
+with the shopping cart page located on the top right of the site. You will stumble upon
+functions like background-image: linear-gradient, controlling the color of the box on the center
+of all sites except for the "Contact" page. You'll also stumble upon functions used previously
+like for example position: relative, text-align: center, overflow: auto  and so on. Each of these
+functions controlling the location of the different things on the site and the texts */
+
+/* This section between 406 and 468 is CSS specific to the different things used for the
+"Home" page of the site */
+/* This CSS right below controls the white box on the center of the home page of the site.
+Here we stumble upon this new function, background-image: linear-gradient. This allows us to be able 
+to pick between multiple colors and have them blend into each other which can look nice */
+.main_box_home {
+    position: relative;
+    overflow: auto;
+    background-image: linear-gradient(rgb(216, 214, 214), white);
+    border: black 0.15em solid;
+    width: 800px;
+    height: 450px;
+    text-align: center;
+    left: 250px;
+    bottom: 120px;
+    font-family: Readex pro;
+    color: white;
+    text-shadow: 0 1px 2px black, 0 1px 2px black;
+}
+.guitar_home {
+    border: black 2px solid;
+    width: 200px;
+    height: 287.5px;
+    position: relative;
+    left: 80px;
+    top: 45px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+/* This hover function right here is unique to what it was doing with the flexbox buttons,
+where it made them animate and switch color. This hover function instead expands the image of the 
+guitar product when you hover the mouse over the image, creating a zooming effect that would look 
+appealing to the customer. This will mostly be used on the "Products" page where all the products 
+will be located. It was made using a combination of -webkit-translation used on the general CSS and
+then using -webkit-transform and transform on the :hover of it's CSS */ 
+.guitar_home:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.guitar_home_description {
+    font-family: Readex Pro;
+    color: black;
+    text-shadow: 0 0.5px 1px purple;
+    position: relative;
+    bottom: 475px;
+    left: 362px;
+    font-size: 0.9rem;
+}
+.jackson_paragraph_home {
+    position: relative;
+    bottom: 165px;
+    left: 336px;
+    font-family: Readex Pro;
+    color: black;
+    text-shadow: 0 0.5px 1px purple;
+    font-size: 0.8rem;
+}
+.guitar_solo_gif {
+    position: relative;
+    bottom: 250px;
+    left: 150px;
+}
+.guitarfail_gif {
+    position: relative;
+    bottom: 100px;
+    left: 200px;
+}
+
+/* This CSS is CSS specific for the "Products" page of the site. Like mentioned above it mainly 
+consists of the different products with their hover function, together with CSS we stumbled upon 
+ealier mentioned in the "Home" page, which also will follow with the other pages */
+.main_box_products {
+    position: relative;
+    overflow: auto;
+    background-image: linear-gradient(rgb(216, 214, 214), white);
+    border: black 0.15em solid;
+    width: 1190px;
+    height: 480px;
+    text-align: center;
+    left: 48px;
+    bottom: 130px;
+}
+
+/* This is the header text for the products box, having the header "Latest Releases:" */
+.head_products {
+    font-family: Readex pro;
+    color: white;
+    text-shadow: 0 1px 2px black, 0 1px 2px black, 0 1px 2px black;
+    font-size: 2rem;
+}
+
+/* This is the CSS that controls my 3 guitar products, using display: flex and justify-content
+to display them */
+.flexbox_guitar_products {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 45px;
+}
+
+/* This is CSS specific for the Jackson Guitar product, together with it's hover function */
+.jackson_guitar_products {
+    border: black 2px solid;
+    height: 287.5px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.jackson_guitar_products:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.1);
+}
+
+/* This is CSS specific for the James Hetfield Guitar product, together with it's hover function */
+.jameshetfield_guitar_products {
+    border: black 2px solid;
+    height: 287.5px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.jameshetfield_guitar_products:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.1);
+}
+
+/* This is CSS specific for the Synyster Guitar product, together with it's hover function */
+.synyster_guitar_products {
+    border: black 2px solid;
+    height: 287.5px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.synyster_guitar_products:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.1);
+}
+
+/* This CSS is for the names of each product written underneath each one */ 
+.names_flexbox {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 65px;
+    font-family: readex pro;
+    font-size: 0.9rem;
+    color: black;
+    text-shadow: 0 0.5px 1px purple;
+}
+
+/* This is the CSS for the prices underneath the names for the products */
+.price_textbox {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 80px;
+}
+
+/* Here is the CSS specifically used for the "About Us" page of the site, stumbling upon similar
+functions used previously */
+.main_box_aboutus {
+    position: relative;
+    overflow: auto;
+    background-image: linear-gradient(rgb(216, 214, 214), white);
+    border: black 0.15em solid;
+    width: 800px;
+    height: 450px;
+    text-align: center;
+    left: 250px;
+    bottom: 120px;
+    font-family: Readex pro;
+    color: white;
+    text-shadow: 0 1px 2px black, 0 1px 2px black;
+}
+
+/* CSS used specifically for the "Contact" page, stumbling upon similar functions used previously */
+.main_box_contact {
+    position: relative;
+    overflow: auto;
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(95, 95, 95));
+    opacity: 0.7;
+    border: black 0.15em solid;
+    width: 750px;
+    height: 530px;
+    left: 270px;
+    bottom: 150px;
+    color: white;
+    text-align: center;
+    font-family: Readex Pro;
+    text-shadow: 0 1px 2px black, 0 0 2px black, 0 0 2px black;
+    font-size: 1.25em;
+}
+
+/* These rows of code here uses a new function on the CSS, text-decoration. This removes the
+underline on the texts labeled to show the instagram and twitter name of the site without
+that line under */
+.instagram_logo {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    right: 10px;
+    top: 60px;
+    font-family: Readex pro;
+    color: white;
+    text-shadow: 0 1px 1px black, 0 1px 1px black, 0 1px 1px black;
+    font-size: 3em;
+    text-decoration: none;
+}
+
+.twitter_logo {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    right: 80px;
+    top: 160px;
+    font-family: Readex pro;
+    color: white;
+    text-shadow: 0 1px 1px black, 0 1px 1px black, 0 1px 1px black;
+    font-size: 3em;
+    text-decoration: none;
+}
+
+/* This is CSS for the Documentation site. We stumble upon the same settings as the white
+box on the home page of the site, followed with a function that was used for the header CSS, using
+margin-top, distancing each text line from one another */
+.main_box_documentation {
+    position: relative;
+    overflow: auto;
+    background-image: linear-gradient(rgb(216, 214, 214), white);
+    border: black 0.15em solid;
+    width: 800px;
+    height: 450px;
+    text-align: center;
+    left: 250px;
+    bottom: 120px;
+    font-family: Readex pro;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px 2px purple;
+}
+.bulletlist {
+    margin-top: 15px;
+}
+
+/* These lines between 654 and 777 is CSS that controls the pages for the different products.
+It uses similar functions for the coloring and the white boxes, controls font sizes by font-size
+function and so on. Most of the CSS is similar on each page for each product */
+
+/* CSS specific for the Jackson guitar page */
+.main_box_jackson {
+    position: relative;
+    overflow: auto;
+    background-image: linear-gradient(rgb(216, 214, 214), white);
+    border: black 0.15em solid;
+    width: 800px;
+    height: 450px;
+    text-align: center;
+    left: 250px;
+    bottom: 120px;
+    font-family: Readex pro;
+    color: white;
+    text-shadow: 0 1px 2px black, 0 1px 2px black;
+    font-size: 1.5rem;
+}
+
+.jackson_guitar_jackson {
+    border: black 3px solid;
+    width: 200px;
+    height: 287.5px;
+    position: relative;
+    left: 40px;
+    top: 30px;
+}
+
+.jackson_description {
+    font-family: Readex pro;
+    color: black;
+    text-shadow: 0 0.5px 1px purple;
+    font-size: 1rem;
+    position: relative;
+    bottom: 500px;
+    left: 660px;
+}
+
+.price_jackson {
+    position: relative;
+    bottom: 190px;
+    left: 360px;
+    font-size: 1.5rem;
+}
+
+/* CSS specific for the James Hetfield guitar page */
+.main_box_jameshetfield {
+    position: relative;
+    overflow: auto;
+    background-image: linear-gradient(rgb(216, 214, 214), white);
+    border: black 0.15em solid;
+    width: 800px;
+    height: 450px;
+    text-align: center;
+    left: 250px;
+    bottom: 120px;
+    font-family: Readex pro;
+    color: white;
+    text-shadow: 0 1px 2px black, 0 1px 2px black;
+    font-size: 1.5rem;
+}
+
+.jameshetfield_guitar_james {
+    border: black 3px solid;
+    width: 200px;
+    height: 287.5px;
+    position: relative;
+    left: 40px;
+    top: 30px;
+}
+
+.jameshetfield_description {
+    font-family: Readex pro;
+    color: black;
+    text-shadow: 0 0.5px 1px purple;
+    font-size: 1rem;
+    position: relative;
+    bottom: 500px;
+    left: 600px;
+}
+
+.price_jameshetfield {
+    position: relative;
+    bottom: 190px;
+    left: 360px;
+    font-size: 1.5rem;
+}
+
+/*CSS specific for the Synyster Gates guitar page */
+.main_box_synyster {
+    position: relative;
+    overflow: auto;
+    background-image: linear-gradient(rgb(216, 214, 214), white);
+    border: black 0.15em solid;
+    width: 800px;
+    height: 450px;
+    text-align: center;
+    left: 250px;
+    bottom: 120px;
+    font-family: Readex pro;
+    color: white;
+    text-shadow: 0 1px 2px black, 0 1px 2px black;
+    font-size: 1.5rem;
+}
+.synyster_guitar_synyster {
+    border: black 3px solid;
+    width: 200px;
+    height: 287.5px;
+    position: relative;
+    left: 40px;
+    top: 30px;
+}
+.synyster_description {
+    font-family: Readex pro;
+    color: black;
+    text-shadow: 0 0.5px 1px purple;
+    font-size: 1rem;
+    position: relative;
+    bottom: 500px;
+    left: 570px;
+}
+.price_synyster {
+    position: relative;
+    bottom: 190px;
+    left: 360px;
+    font-size: 1.5rem;
+}
+
+/* This is CSS that controls an "Add to cart" button provided in each of the products' pages.
+It had certain adjustments like having backgroud color set to red, removed borders by border: none,
+adjusted height and width manually with the height: and width: functions and so on */
+.addtocart_button {
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 0.3em;
+    padding: 0.67em;
+    border: 2px solid black;
+    font-family: Readex Pro;
+    font-size: 1.19rem;
+    text-shadow: 0 0 2px black;
+    height: 15%;
+    width:  22%;
+    position: relative;
+    left: 120px;
+    bottom: 120px;
+    cursor: pointer;
+}
+/* This also has a form of animation using the hover function, with the function that the color 
+changes to yellow when the cursor is on the button */
+.addtocart_button:hover {
+    background: yellow;
+}
+
+/* Lastly, this is CSS that controls the Shopping Cart page of the site. You will stumble upon
+similar functions used by the other pages of the site, mostly positioning each product put into the
+cart using functions mentioned earlier, together with it's price, and a remove button that also has 
+a hover animation function all the way at the bottom */
+.main_box_shopcart {
+    position: relative;
+    overflow: auto;
+    background-image: linear-gradient(rgb(216, 214, 214), white);
+    border: black 0.15em solid;
+    width: 800px;
+    height: 450px;
+    text-align: center;
+    left: 250px;
+    bottom: 120px;
+    font-family: Readex pro;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px 2px purple, 0 1px 2px purple;
+}
+.shopcart_header {
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 0 1px 2px black;
+}
+.cart_header {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.cart_column {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    margin-right: 2.5em;
+    padding-bottom: 1px;
+    margin-top: 10px;
+}
+.cart_row {
+    display: flex;
+}
+.cart_item {
+    width: 50%;
+}
+.cart_price {
+    width: 20%;
+    font-size: 1.1em;
+}
+.cart_quantity {
+    width: 35%;
+}
+.removebutton {
+    border: none;
+    background-color: rgb(107, 199, 230);
+    color: white;
+    border-radius: .3em;
+    padding: 0.1em;
+    border: black 1px solid;
+    text-shadow: 0 0px 1px black;
+    font-family: Readex Pro;
+    cursor:pointer;
+}
+.removebutton:hover {
+    background-color: rgb(63, 155, 185);
+}
+.cart_item_title {
+    margin-left: 0.5em;
+}
+.cart_item_image {
+    width: 50px;
+    height: auto;
+    border: 1.5px solid black;
+    border-radius: 2px;
+}
+.cart_quantity_input {
+    height: 22px;
+    width: 40px;
+    border-radius: 3px;
+    border: 1px solid purple;
+    padding: 0;
+    text-align: center;
+    margin-right: 70px;
+}
+.cart_row:last-child {
+    border-bottom: 2px solid black;
+}
+.cart_row:last-child .cart_column {
+    border: none;
+}
+.totalprice {
+    font-size: 1.2rem;
+    text-align: start;
+    text-shadow: 0 1px 2px red;
+}
+.cart_total_title {
+    margin-right: 10px;
+}
+.purchase_button {
+    border: none;
+    background-color: purple;
+    color: white;
+    border-radius: 0.3em;
+    padding: 0.67em;
+    border: 2px solid black;
+    font-family: Readex Pro;
+    font-size: 1.19rem;
+    text-shadow: 0 0 2px black;
+    height: 15%;
+    width:  20%;
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+}
+.purchase_button:hover {
+    background: rgb(0, 225, 255);
+}

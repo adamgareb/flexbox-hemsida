@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="cart.js" async></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">      
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Readex+Pro:wght@700&display=swap" rel="stylesheet">
+    <div class="header">
+            <div class="Gitala_headtext"><h1>GITALA</h1></div>
+            <a href="https://youtu.be/S-Q9fFVFyeU?t=20" target="_blank"><img src="img/guitarpng.png" class="head_guitarlogo" alt="Guitarlogo"></a>
+        <p class="headerparagraph">"Where guitar dreams come to life"</p>
+            <a href="shoppingcart.html" class="shoppingcart"><img src="img/Cart.png" height="60" width="60" alt="ShoppingCart"></a>
+        <div class="flexbox">
+            <a href="index.html" class="flexbox_home">Home</a>
+            <a href="products.html" class="flexbox_products">Products</b></a>
+            <a href="aboutus.html" class="flexbox_aboutus">About Us</a>
+            <a href="contact.html" class="flexbox_contact">Contact</a>
+        </div>
+    </div>
+    </head>
+    <body>
+        <div class="main">
+            <div class="guitarbackground"><img src="img/guitarbackground.jpg" height="720" alt="Guitarbackground"></div>
+            <!--The display of the shopping cart of the customer, displaying the item, the price and the quantity of the product.-->
+            <div class="main_box_shopcart">
+                <div class="shopcart_header"><h2>Your Cart:</h2></div>
+            <div class="cart_row">
+                <span class="cart_item cart_header cart_column">ITEM</span>
+                <span class="cart_price cart_header cart_column">PRICE</span>
+                <span class="cart_quantity cart_header cart_column">QUANTITY</span>
+            </div>
+            <!--Display of product number 1 showing the details mentioned above-->
+            <div class="cart_items">
+                <div class="cart_row">
+                    <div class="cart_item cart_column">
+                        <img class="cart_item_image" src="img/Guitars/JacksonMJblackandyellow.png" width="60" alt="Jackson_Guitar">
+                        <span class="cart_item_title">Jackson MJ Series Dinky DKR</span>
+                    </div>
+                    <span class="cart_price cart_column">$998.76</span>
+                    <div class="cart_quantity cart_column">
+                        <input class="cart_quantity_input" type="number" value="1">
+                        <button class="removebutton" role="button">REMOVE</button>
+                    </div>
+                </div>
+                <!--Displaying product 2 under product 1 showing the same details-->
+                <div class="cart_row">
+                    <div class="cart_item cart_column">
+                        <img class="cart_item_image" src="img/Guitars/SynysterStandard.png" width="60" alt="Synyster_Guitar">
+                        <span class="cart_item_title">Synyster Gates Signature Model</span>
+                    </div>
+                    <span class="cart_price cart_column">$1297.99</span>
+                    <div class="cart_quantity cart_column">
+                        <input class="cart_quantity_input" type="number" value="1">
+                        <button class="removebutton" role="button">REMOVE</button>
+                    </div>
+                </div>
+            </div>
+                <!--This part is displaying the total price of everything you've put in your shopping cart altogether-->
+                <div class="totalprice">
+                    <strong class="cart_total_title">Total:</strong>
+                    <span class="cart_total_price">$2296.75</span>
+                </div>
+                <div>
+                    <!--The "purchase" button-->
+                    <button class="purchase_button" role="button">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!--Footer of the website together with a paragraph and the documentation of the site-->
+    <footer class="footer">
+        <div class="footertext">
+            <p>© Adam Hama Gareb 2021</p>
+            <p>All right reserved. Do not copy. Otherwise you'll get sued pretty hard. Unless you're Herman. Cuz that's my teacher. And he can pretty much do whatever he wants ig lmao</p>
+            <a href="documentation.html" class="documentation"><p>Documentation</p></a>
+        </div>
+    </footer>
+</html>
